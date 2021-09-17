@@ -26,6 +26,11 @@ namespace GameMain {
             }
         }
 
+
+        public void SingleMode() {
+            // ChangeState<SingleMode>(owner);
+        }
+
         /**
          * µÇÂ¼°´Å¥ÊÂ¼þ
          */
