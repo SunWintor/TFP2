@@ -26,9 +26,11 @@ namespace GameMain {
             }
         }
 
-
+        /**
+         * 单人游戏
+         */
         public void SingleMode() {
-            // ChangeState<SingleMode>(owner);
+            // ChangeState<ProcedureSingleMode>(owner);
         }
 
         /**
@@ -48,7 +50,7 @@ namespace GameMain {
         /**
          * 打开登录窗口
          */
-        private void OpenLoginUI() {
+        public void OpenLoginUI() {
             LoginCheck();
             GameEntry.UI.CloseAllLoadedUIForms();
             GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Login.prefab", "DefaultGroup");
@@ -57,7 +59,7 @@ namespace GameMain {
         /**
          * 打开注册窗口
          */
-        private void OpenRegisterUI() {
+        public void OpenRegisterUI() {
             GameEntry.UI.CloseAllLoadedUIForms();
             GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Register.prefab", "DefaultGroup");
         }
