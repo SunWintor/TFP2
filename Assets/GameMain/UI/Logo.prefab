@@ -80,9 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f423b40a603c6747bfe5ec00825ff07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SplashLogo: {fileID: 0}
   FadeSpeed: 0.3
-  WaitTime: 2
+  WaitTime: 0.5
 --- !u!1 &9124344064416291523
 GameObject:
   m_ObjectHideFlags: 0

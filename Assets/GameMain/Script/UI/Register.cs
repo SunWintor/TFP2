@@ -3,7 +3,7 @@ using GameMain;
 using Tutorial;
 using UGFR = UnityGameFramework.Runtime;
 
-public class Login : UGFR.UIFormLogic {
+public class Register : UGFR.UIFormLogic {
 
     private static ProcedureLogin procedureLogin;
 
@@ -11,26 +11,19 @@ public class Login : UGFR.UIFormLogic {
         procedureLogin = (ProcedureLogin)userData;
         this.InternalSetVisible(true);
     }
-    
+
     /**
-     * 单人游戏
+     * 注册按钮事件
      */
-    public void SingleMode() {
-        procedureLogin.SingleMode();
+    public void RegisterButton() {
+        procedureLogin.RegisterButton();
     }
 
     /**
-     * 登录按钮事件
+     * 打开登录窗口
      */
-    public void LoginButton() {
-        procedureLogin.LoginButton();
-    }
-
-    /**
-     * 打开注册窗口
-     */
-    public void OpenRegisterUI() {
+    public void OpenLoginUI() {
         this.InternalSetVisible(false);
-        procedureLogin.OpenRegisterUI();
+        procedureLogin.OpenLoginUI();
     }
 }

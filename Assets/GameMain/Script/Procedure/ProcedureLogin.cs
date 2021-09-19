@@ -1,5 +1,6 @@
 using GameFramework.Procedure;
 using Tutorial;
+using UGFR = UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
 namespace GameMain {
@@ -52,16 +53,14 @@ namespace GameMain {
          */
         public void OpenLoginUI() {
             LoginCheck();
-            GameEntry.UI.CloseAllLoadedUIForms();
-            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Login.prefab", "DefaultGroup");
+            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Login.prefab", "DefaultGroup", this);
         }
 
         /**
          * ´ò¿ª×¢²á´°¿Ú
          */
         public void OpenRegisterUI() {
-            GameEntry.UI.CloseAllLoadedUIForms();
-            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Register.prefab", "DefaultGroup");
+            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Register.prefab", "DefaultGroup", this);
         }
     }
 }
