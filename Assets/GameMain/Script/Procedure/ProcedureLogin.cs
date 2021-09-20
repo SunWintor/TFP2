@@ -1,6 +1,5 @@
 using GameFramework.Procedure;
 using Tutorial;
-using UGFR = UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
 namespace GameMain {
@@ -31,7 +30,7 @@ namespace GameMain {
          * µ•»À”Œœ∑
          */
         public void SingleMode() {
-            // ChangeState<ProcedureSingleMode>(owner);
+            ChangeState<ProcedureSingleMode>(owner);
         }
 
         /**

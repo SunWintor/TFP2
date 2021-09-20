@@ -1,6 +1,5 @@
 
 using GameMain;
-using Tutorial;
 using UGFR = UnityGameFramework.Runtime;
 
 public class Login : UGFR.UIFormLogic {
