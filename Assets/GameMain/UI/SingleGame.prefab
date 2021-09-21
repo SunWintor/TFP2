@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4193496431043538843}
   - component: {fileID: 3044389047625389979}
   m_Layer: 5
-  m_Name: Button_plus
+  m_Name: ButtonAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4193496431043538843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788444715909829427}
+        m_TargetAssemblyTypeName: SingleGame, Assembly-CSharp
+        m_MethodName: AddButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &762825921473744668
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +453,7 @@ GameObject:
   - component: {fileID: 1028601047808271927}
   - component: {fileID: 2770770087192917065}
   - component: {fileID: 7857165771182314603}
+  - component: {fileID: 7748733949411638984}
   m_Layer: 5
   m_Name: SingleGame
   m_TagString: Untagged
@@ -460,7 +473,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2570080247652799772}
-  - {fileID: 1025649060155868549}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -530,6 +542,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7748733949411638984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638713777971459733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35ef3581b912ed45b1d54375cb3710f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4483683269692612104
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +721,7 @@ GameObject:
   - component: {fileID: 4294320780922141221}
   - component: {fileID: 8142618504833345373}
   m_Layer: 5
-  m_Name: Button_x
+  m_Name: ButtonClose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -805,13 +829,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9098456463191359265}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 788444715909829427}
+        m_TargetAssemblyTypeName: SingleGame, Assembly-CSharp
+        m_MethodName: CloseButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -830,7 +854,7 @@ GameObject:
   - component: {fileID: 7143372681237200345}
   - component: {fileID: 1547143175957211209}
   m_Layer: 5
-  m_Name: Button_minus_ten
+  m_Name: ButtonSubRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +961,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7143372681237200345}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788444715909829427}
+        m_TargetAssemblyTypeName: SingleGame, Assembly-CSharp
+        m_MethodName: AddButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6125316508899219685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1163,7 @@ RectTransform:
   - {fileID: 4091892474986819793}
   - {fileID: 1508267163533223874}
   - {fileID: 3298458694334041272}
+  - {fileID: 1025649060155868549}
   m_Father: {fileID: 6624637850791329132}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1186,7 +1223,7 @@ GameObject:
   - component: {fileID: 5766649580461039871}
   - component: {fileID: 6450273952908567426}
   m_Layer: 5
-  m_Name: Button_minus
+  m_Name: ButtonSub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1293,7 +1330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5766649580461039871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788444715909829427}
+        m_TargetAssemblyTypeName: SingleGame, Assembly-CSharp
+        m_MethodName: AddButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7665195012420742019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1356,7 @@ GameObject:
   - component: {fileID: 1477875633005186365}
   - component: {fileID: 3621041736807205173}
   m_Layer: 5
-  m_Name: Button_plus_ten
+  m_Name: ButtonAddRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1414,7 +1463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1477875633005186365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788444715909829427}
+        m_TargetAssemblyTypeName: SingleGame, Assembly-CSharp
+        m_MethodName: AddButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8770708069431908720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,7 +1489,7 @@ GameObject:
   - component: {fileID: 7486948283574232642}
   - component: {fileID: 456213703695099090}
   m_Layer: 5
-  m_Name: Button_checkmark
+  m_Name: ButtonReady
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1535,7 +1596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7486948283574232642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 788444715909829427}
+        m_TargetAssemblyTypeName: SingleGame, Assembly-CSharp
+        m_MethodName: ReadyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8796310055650682897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,11 +1737,35 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 6624637850791329132}
+    m_TransformParent: {fileID: 2570080247652799772}
     m_Modifications:
+    - target: {fileID: 4284227756021612958, guid: 4eea2df64389898459577e99daf10731, type: 3}
+      propertyPath: m_Size
+      value: 0.17288263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284227756021612958, guid: 4eea2df64389898459577e99daf10731, type: 3}
+      propertyPath: m_Direction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5981819726732718184, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_Name
       value: Info
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622241164147433816, guid: 4eea2df64389898459577e99daf10731, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 455.3441
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622241164147433816, guid: 4eea2df64389898459577e99daf10731, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -30.358
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622241164147433816, guid: 4eea2df64389898459577e99daf10731, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 47.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622241164147433816, guid: 4eea2df64389898459577e99daf10731, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.178
       objectReference: {fileID: 0}
     - target: {fileID: 8182927955668029999, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -1696,7 +1793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290050232770801569, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8290050232770801569, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1716,11 +1813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290050232770801569, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -300
+      value: -1257
       objectReference: {fileID: 0}
     - target: {fileID: 8290050232770801569, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -100
+      value: -406
       objectReference: {fileID: 0}
     - target: {fileID: 8290050232770801569, guid: 4eea2df64389898459577e99daf10731, type: 3}
       propertyPath: m_LocalPosition.x
