@@ -1,5 +1,6 @@
 using UGFR = UnityGameFramework.Runtime;
 using GameMain;
+using Tutorial;
 
 public class SingleGame : UGFR.UIFormLogic {
 
@@ -13,6 +14,8 @@ public class SingleGame : UGFR.UIFormLogic {
      * ¹Ø±Õ
      */
     public void CloseButton() {
+        GameEntry.UI.CloseAllLoadedUIForms();
+        GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Login.prefab", "DefaultGroup", this);
     }
 
     /**
