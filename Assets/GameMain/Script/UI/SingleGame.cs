@@ -12,7 +12,7 @@ public class SingleGame : UGFR.UIFormLogic {
         gameContext = new GameContext();
         gameContext.CurrentUser = new GameUserInfo();
         //gameContext.CurrentUser.UserId = ;
-        //gameContext.CurrentUser.UserId = ;
+        //gameContext.CurrentUser.UserName = ;
     }
 
     /**
