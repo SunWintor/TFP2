@@ -15,6 +15,10 @@ public class SingleGame : UGFR.UIFormLogic {
         //gameContext.CurrentUser.UserName = ;
     }
 
+    private void Update() {
+        // todo 
+    }
+
     /**
      * ¹Ø±Õ
      */
