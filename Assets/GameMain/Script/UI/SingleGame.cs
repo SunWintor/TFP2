@@ -1,5 +1,4 @@
 using UGFR = UnityGameFramework.Runtime;
-using GameMain;
 using Tutorial;
 
 public class SingleGame : UGFR.UIFormLogic {
