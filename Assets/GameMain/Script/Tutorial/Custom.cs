@@ -13,7 +13,17 @@ namespace Tutorial {
             private set;
         }
 
+        /// <summary>
+        /// 获取游戏流程信息。
+        /// </summary>
+        public static GameProcedureInfo ProcedureInfo {
+            get;
+            private set;
+        }
+
         private static void InitCustomComponents() {
+            User = new UserInfo();
+            ProcedureInfo = new GameProcedureInfo();
         }
 
         private static void InitCustomDebuggers() {

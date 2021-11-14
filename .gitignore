@@ -17,6 +17,7 @@
 *.userprefs
 *.pidb
 *.svd
+*.alf
 
 /Assets/StreamingAssets/*
 !/Assets/StreamingAssets/.gitkeep

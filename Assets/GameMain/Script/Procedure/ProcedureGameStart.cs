@@ -1,4 +1,5 @@
 ﻿using GameFramework.Procedure;
+using Tutorial;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
 namespace GameMain {
@@ -7,6 +8,7 @@ namespace GameMain {
             base.OnEnter(procedureOwner);
 
             // 有需要加载的东西的话，就在这里进行加载
+            GameEntry.ProcedureInfo.owner = procedureOwner;
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds) {

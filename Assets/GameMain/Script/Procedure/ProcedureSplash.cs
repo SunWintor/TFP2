@@ -5,18 +5,18 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 namespace GameMain {
     public class ProcedureSplash : ProcedureBase {
 
-        ProcedureOwner owner;
+        private int logoUI;
 
         protected override void OnEnter(ProcedureOwner procedureOwner) {
             base.OnEnter(procedureOwner);
-            owner = procedureOwner;
             // 加载过场动画
-            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Logo.prefab", "DefaultGroup", this);
+            logoUI = GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Logo.prefab", "DefaultGroup", this);
+            UnityGameFramework.Runtime.Log.Debug("logoUI " + logoUI);
         }
 
         public void ChangeToLogin() {
-            GameEntry.UI.CloseAllLoadedUIForms();
-            ChangeState<ProcedureLogin>(owner);
+            GameEntry.UI.CloseUIForm(logoUI);
+            ChangeState<ProcedureLogin>(GameEntry.ProcedureInfo.owner);
         }
     }
 }

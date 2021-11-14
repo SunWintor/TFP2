@@ -1,18 +1,23 @@
 using GameFramework.Procedure;
 using Tutorial;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+using UnityEngine;
 
 namespace GameMain {
     public class ProcedureLogin : ProcedureBase {
 
         private UserInfo User;
         private ProcedureOwner owner;
+        private int loginUI;
+        private int registerUI;
+        private Canvas loginLogic;
+        private Canvas registerLogic;
 
         protected override void OnEnter(ProcedureOwner procedureOwner) {
             base.OnEnter(procedureOwner);
             owner = procedureOwner;
             User = GameEntry.User;
-            OpenLoginUI();
+            OpenLoginUI(null);
         }
 
         /**
@@ -21,7 +26,7 @@ namespace GameMain {
         private void LoginCheck() {
             if (User != null && User.Csrf != "") {
                 // todo login
-                GameEntry.UI.CloseAllLoadedUIForms();
+                // GameEntry.UI.CloseAllLoadedUIForms();
                 // ChangeState<ProcedureLobby>(owner);
             }
         }
@@ -50,16 +55,38 @@ namespace GameMain {
         /**
          * 打开登录窗口
          */
-        public void OpenLoginUI() {
+        public void OpenLoginUI(Canvas logic) {
+            if (logic != null) {
+                registerLogic = logic;
+            }
             LoginCheck();
-            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Login.prefab", "DefaultGroup", this);
+            if (loginUI == 0) {
+                loginUI = GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Login.prefab", "DefaultGroup", this);
+                return;
+            } 
+            if (registerLogic != null) {
+                registerLogic.sortingOrder = -1;
+            }
+            if (loginLogic != null) {
+                loginLogic.sortingOrder = 1;
+            }
         }
 
         /**
          * 打开注册窗口
          */
-        public void OpenRegisterUI() {
-            GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Register.prefab", "DefaultGroup", this);
+        public void OpenRegisterUI(Canvas logic) {
+            loginLogic = logic;
+            if (registerUI == 0) {
+                registerUI = GameEntry.UI.OpenUIForm("Assets/GameMain/UI/Register.prefab", "DefaultGroup", this);
+                return;
+            }
+            if (registerLogic != null) {
+                registerLogic.sortingOrder = 1;
+            }
+            if (loginLogic != null) {
+                loginLogic.sortingOrder = -1;
+            }
         }
     }
 }
